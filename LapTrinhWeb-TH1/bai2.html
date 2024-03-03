@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            .containers {
+                width: 50%;
+            }
+            .tagg{
+                font-weight: bold;
+                font-family: Arial, sans-serif;
+                font-size: 20px;
+                margin-bottom: 2%;
+            }
+            .tag {
+                display: inline-block;
+                background-color: #7FFF00;
+                text-align: center;
+                margin-top: 1%;
+                margin-right:2%;
+                font-size: 16px;
+                color: aliceblue;
+                font-family: Arial, sans-serif;
+                padding: 1%;
+                border-radius: 1cqmin;
+            }
+            .marginn{
+                margin-left: 5%;
+            }
+        </style>
+        <script>
+            var i = 0;
+            var tag = ["html", "css", "java script", "jquery", "web design", "django", "python", "machine learning", "data sclence"];
+            function cactag() {
+                tag.forEach(function(tag){
+                    i++;
+                    if(i == 6)
+                    {
+                        document.write(`
+                            </br>
+                    `);
+                    }
+                    document.write(`
+                        <div class="tag">${tag}</div>
+                    `);
+                })
+            }
+        </script>
+    </head>
+    <body>
+        <div class="containers">
+            <div class="tagg">Các tag phổ biến</div>
+            <div class="marginn"><script>cactag();</script></div>
+        </div>
+    </body>
+</html>
